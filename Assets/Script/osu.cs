@@ -68,7 +68,7 @@ public class osu : MonoBehaviour
 
 		if (M_number == 3)
 		{
-			m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
+			//m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
 		}
 	}
 }

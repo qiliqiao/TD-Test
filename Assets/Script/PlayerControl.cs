@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -16,27 +17,36 @@ public class PlayerControl : MonoBehaviour
 	//private float m_Y = 1.0f;
 	private float m_Z = 4.0f;
 
+	[SerializeField]
+	private Slider m_Slider;
+
 	void OnCollisionEnter(Collision collision)
 	{	
 		if (collision.transform.tag == "Stone") 
 		{
-			m_Speed = 0.45f;
+			m_Slider.value -= 0.1f;
 		}
 
 		if (collision.transform.tag == "battery") 
 		{
-			m_Speed = 0.55f;
+			m_Slider.value += 0.1f;
 		}
-
 	}
 
-	void Start ()
-	{
 
+	void Start () 
+	{
+		m_Slider = GameObject.Find("Slider").GetComponent<Slider>();
+		m_Slider.value = 1.0f;
 	}
 
 	void Update ()
 	{
+		m_Slider.value -= 0.00084f;
+		if (m_Slider.value == 0.0f) 
+		{
+			m_Speed = 0.0f;
+		}
 		m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Speed, m_Player.position.z);
 
 		if (Input.GetKeyDown (KeyCode.LeftArrow))

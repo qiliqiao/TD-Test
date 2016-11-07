@@ -35,6 +35,11 @@ public class Items : MonoBehaviour
 			{
 				Destroy (gameObject);
 			}
+
+			if (collision.transform.tag == "Stone" && transform.tag == "Stone") 
+			{
+				Destroy (gameObject);
+			}
 		}
 	}
 
