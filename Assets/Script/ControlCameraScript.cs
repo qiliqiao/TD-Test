@@ -16,7 +16,7 @@ public class ControlCameraScript : MonoBehaviour
 	
 	void Update () 
     {
-		m_Camera.position = new Vector3 (m_Camera.position.x, m_Player.position.y + 29, m_Camera.position.z);
+		m_Camera.position = new Vector3 (m_Camera.position.x, m_Player.position.y + 24, m_Camera.position.z);
 
 
 		#if UNITY_EDITOR_WIN

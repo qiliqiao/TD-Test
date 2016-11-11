@@ -20,6 +20,11 @@ public class PlayerControl : MonoBehaviour
 	[SerializeField]
 	private Slider m_Slider;
 
+	private bool m_S;
+
+	[SerializeField]
+	private GameObject m_;
+
 	void OnCollisionEnter(Collision collision)
 	{	
 		if (collision.transform.tag == "Stone") 
@@ -33,19 +38,34 @@ public class PlayerControl : MonoBehaviour
 		}
 	}
 
-
-	void Start () 
+	void Start ()
 	{
 		m_Slider = GameObject.Find("Slider").GetComponent<Slider>();
 		m_Slider.value = 1.0f;
+		m_S = false;
 	}
 
 	void Update ()
 	{
 		m_Slider.value -= 0.00084f;
+
 		if (m_Slider.value == 0.0f) 
 		{
 			m_Speed = 0.0f;
+		}
+		else
+		{
+			if (m_Player.position.y - m_Floor.position.y > 18.0f)
+			{
+				m_Speed = 0.2f;
+				m_.GetComponent<Renderer>().material.color = new Color (0, 0, 0, 0.0f);
+			}
+			else if (m_Player.position.y - m_Floor.position.y < 16.0f)
+			{
+				m_Speed = 0.3f;
+
+				m_.GetComponent<Renderer>().material.color = new Color (1, 0, 0, 1.0f);
+			}
 		}
 		m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Speed, m_Player.position.z);
 

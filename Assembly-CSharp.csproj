@@ -54,6 +54,7 @@
      <Compile Include="Assets\Script\PlayerControl.cs" />
      <Compile Include="Assets\Script\Score.cs" />
      <Compile Include="Assets\Script\osu.cs" />
+     <Compile Include="Assets\WallControl.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

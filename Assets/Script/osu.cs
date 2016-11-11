@@ -11,7 +11,7 @@ public class osu : MonoBehaviour
 	private Transform m_Player;
 
 	private float m_X = 4.0f;
-	private float m_Y = 1.0f;
+	//private float m_Y = 1.0f;
 	private float m_Z = 4.0f;
 
 	// Use this for initialization
