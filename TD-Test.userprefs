@@ -4,14 +4,14 @@
     <Files>
       <File FileName="Assets/Script/ControlCameraScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/GameOver.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/osu.cs" Line="21" Column="3" />
-      <File FileName="Assets/Script/PlayerControl.cs" Line="66" Column="5" />
+      <File FileName="Assets/Script/osu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerControl.cs" Line="108" Column="5" />
       <File FileName="Assets/Script/FloorMove.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Score.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Pausable.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/MakeItems.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/Items.cs" Line="1" Column="1" />
-      <File FileName="Assets/WallControl.cs" Line="26" Column="1" />
+      <File FileName="Assets/FingerEvent.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

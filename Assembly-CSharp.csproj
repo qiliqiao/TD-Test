@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FingerEvent.cs" />
      <Compile Include="Assets\Script\ControlCameraScript.cs" />
      <Compile Include="Assets\Script\FloorMove.cs" />
      <Compile Include="Assets\Script\GameOver.cs" />
@@ -53,14 +54,19 @@
      <Compile Include="Assets\Script\Pausable.cs" />
      <Compile Include="Assets\Script\PlayerControl.cs" />
      <Compile Include="Assets\Script\Score.cs" />
+     <Compile Include="Assets\Script\WallControl.cs" />
      <Compile Include="Assets\Script\osu.cs" />
-     <Compile Include="Assets\WallControl.cs" />
+     <None Include="Assets\Model 1\キャラクターサイズ.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{EAF7B2D2-44B9-0CAC-E6DF-E271FB2149DE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

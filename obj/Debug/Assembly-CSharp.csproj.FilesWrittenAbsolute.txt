@@ -15,3 +15,5 @@
 /Users/qiliqiao/GitHub/卒業作品/TD-Test/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/qiliqiao/GitHub/卒業作品/TD-Test/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/qiliqiao/GitHub/卒業作品/TD-Test/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/qiliqiao/GitHub/卒業作品/TD-Test/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/qiliqiao/GitHub/卒業作品/TD-Test/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

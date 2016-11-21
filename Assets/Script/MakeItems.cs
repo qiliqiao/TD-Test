@@ -7,7 +7,7 @@ public class MakeItems : MonoBehaviour
 	private Transform m_Player;
 
 	[SerializeField]
-	private GameObject m_GamePrefab;
+	private GameObject[] m_GamePrefab;
 
 	private int m_Time;
 	private bool m_Pausing;
@@ -15,7 +15,7 @@ public class MakeItems : MonoBehaviour
 
 	void Start () 
 	{
-		
+
 	}
 
 
@@ -30,7 +30,11 @@ public class MakeItems : MonoBehaviour
 			{
 				transform.position = new Vector3 (transform.position.x, m_Player.position.y + 50, transform.position.z);
 
-				GameObject Go = Instantiate (m_GamePrefab, transform.position, Quaternion.identity) as GameObject;
+				if (Random.Range (0, 2) == 0)
+				{
+					GameObject Go = Instantiate (m_GamePrefab [Random.Range (0, 2)], transform.position, Quaternion.identity) as GameObject;
+				}
+
 				m_Time = 0;
 			}
 		}
