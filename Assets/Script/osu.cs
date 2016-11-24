@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 public class osu : MonoBehaviour 
 {
@@ -94,6 +94,10 @@ public class osu : MonoBehaviour
 		if (M_number == 3)
 		{
 			//m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y + m_Y, m_Player.position.z);
+		}
+		if (M_number == 5)
+		{
+			SceneManager.LoadScene("scene1");
 		}
 	}
 }

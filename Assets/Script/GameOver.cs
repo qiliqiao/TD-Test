@@ -9,6 +9,9 @@ public class GameOver : MonoBehaviour
 	[SerializeField]
 	private Text m_GameOver;
 
+	[SerializeField]
+	private GameObject m_Restart;
+
 	/// <summary>
 	/// 現在Pause中か？
 	/// </summary>
@@ -44,6 +47,8 @@ public class GameOver : MonoBehaviour
 		if (collision.transform.tag == "Floor")
 		{
 			Debug.Log ("GameOver");
+			m_Restart.SetActive(true);
+			//m_Restart.localPosition = new Vector3 (0.0f, -400.0f, 0.0f);
 			m_GameOver.text = "GameOver";
 			pausing = true;
 
