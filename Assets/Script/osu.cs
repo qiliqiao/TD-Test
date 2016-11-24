@@ -34,15 +34,27 @@ public class osu : MonoBehaviour
 		{
 			if (m_Player.position.x == -11) 
 			{
-				if (m_Player.position.z <= 1) 
+				if(m_Player.position.z == -11)
 				{
+					m_Player.rotation = new Quaternion (0, 0.4f, 0, 1);
+					m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y, m_Player.position.z + m_Z);
+				}
+				else if (m_Player.position.z <= 1) 
+				{
+					m_Player.rotation = new Quaternion (0, 0.4f, 0, 1);
 					m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y, m_Player.position.z + m_Z);
 				}
 			}
 			else
 			{
-				if (m_Player.position.x >= -11)
+				if (m_Player.position.x == -7)
 				{
+					m_Player.rotation = new Quaternion (0, 0, 0, 1);
+					m_Player.position = new Vector3 (m_Player.position.x - m_X, m_Player.position.y, m_Player.position.z);
+				}
+				else if (m_Player.position.z >= -11)
+				{
+					m_Player.rotation = new Quaternion (0, -0.4f, 0, 1);
 					m_Player.position = new Vector3 (m_Player.position.x - m_X, m_Player.position.y, m_Player.position.z);
 				}
 			}
@@ -52,18 +64,31 @@ public class osu : MonoBehaviour
 		{
 			if (m_Player.position.z == -11) 
 			{
-				if (m_Player.position.x <= 1) 
+				if (m_Player.position.x == -11)
 				{
+					m_Player.rotation = new Quaternion (0, -0.4f, 0, 1);
+					m_Player.position = new Vector3 (m_Player.position.x + m_X, m_Player.position.y, m_Player.position.z);
+				}
+				else if (m_Player.position.x <= 1) 
+				{
+					m_Player.rotation = new Quaternion (0, -0.4f, 0, 1);
 					m_Player.position = new Vector3 (m_Player.position.x + m_X, m_Player.position.y, m_Player.position.z);
 				}
 			}
 			else
-			{	
-				if (m_Player.position.z >= -11)
+			{
+				if (m_Player.position.z == -7)
 				{
+					m_Player.rotation = new Quaternion (0, 0, 0, 1);
+					m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y, m_Player.position.z - m_Z);
+				}
+				else if (m_Player.position.x >= -11)
+				{
+					m_Player.rotation = new Quaternion (0, 0.4f, 0, 1);
 					m_Player.position = new Vector3 (m_Player.position.x, m_Player.position.y, m_Player.position.z - m_Z);
 				}
 			}
+
 		}
 
 		if (M_number == 3)
